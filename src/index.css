@@ -1,0 +1,47 @@
+/* 基础指令，报错请忽略 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --primary: 180 100% 50%; /* 霓虹青 */
+    --neon-cyan: 180 100% 50%;
+    --neon-pink: 320 100% 60%;
+    --neon-purple: 280 100% 60%;
+    --card: 240 10% 10%;
+    --muted: 240 5% 26%;
+    --muted-foreground: 240 5% 65%;
+  }
+}
+
+@layer components {
+  /* 赛博网格背景 */
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* 扫描线 */
+  .scanlines {
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0, 0, 0, 0.05) 51%,
+      transparent 51%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+  }
+
+  /* 霓虹文字发光 */
+  .cyber-text-glow {
+    text-shadow: 0 0 10px hsla(180, 100%, 50%, 0.5), 0 0 20px hsla(180, 100%, 50%, 0.3);
+  }
+}
